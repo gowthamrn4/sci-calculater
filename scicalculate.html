@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculate</title>
+	<style>
+	body
+	{
+		background-color:green;
+	}
+		div
+		{
+			width:500px;
+			height:auto;
+			background-color:black;
+			padding:20px;
+			border-radius:50px;
+			border-left:4px solid blue;
+			border-top:4px solid blue;
+			border-right:4px solid blue;
+			border-bottom:4px solid blue;
+			box-shadow:20px 20px 120px 16px black;  
+		}
+		input[type=text]
+		{
+			width:80%;
+			padding:10px;
+			font-size:22px;
+			font-weight:bold;
+			border-radius:20px;
+			border-bottom:4px solid white;
+			text-align:right;
+			background-color:blue;
+			color: white;
+
+		}
+		hr
+		{
+			box-shadow:20px 20px 120px 16px black;  
+		}
+		input[type=button]
+		{
+			width:100px;
+			height:30px;
+			border-bottom:4px solid blue;
+			font-size:22px;
+			font-weight:bold;
+			border-radius:12px;
+			box-shadow:10px 10px 100px 10px black;  
+		}
+		input[type=button]:hover
+		{
+			background-color:blue;
+		}
+		
+
+	</style>
+	
+</head>
+<body>
+	<center>
+		<h1>Scientific calculator - Gowtham Rn</h1>
+		<hr size="5">
+		<div>
+			<form name="cal">
+				<input type="text" name="display">
+				<br><br>
+				<input type="button" value="&radic;" onclick="display.value=Math.sqrt(display.value)">
+				<input type="button" value="cos" onclick="display.value=Math.cos(display.value)">
+				<input type="button" value="sin" onclick="display.value=Math.sin(display.value)">
+				<input type="button" value="tan" onclick="display.value=Math.tan(display.value)">
+				<br><br>
+				<input type="button" value="log" onclick="display.value=Math.log(display.value)">
+				<input type="button" value="PI" onclick="display.value=Math.PI">
+				<input type="button" value="EXP" onclick="display.value=Math.exp(display.value)">
+				<input type="button" value="^" onclick="display.value=Math.pow(display.value,2)">
+				<br><br>
+				<input type="button" value="(" onclick="display.value+='('">
+				<input type="button" value=")" onclick="display.value+=')'">
+				<input type="button"  value="EXIT" onclick="closeWin()">
+				<input type="button" value="Delete" onclick="display.value=display.value.substring(0,display.value.length-1)">
+                <br><br>
+				<input type="button" value="9" onclick="display.value+='9'">
+				<input type="button" value="8" onclick="display.value+='8'">
+				<input type="button" value="7" onclick="display.value+='7'">
+				<input type="button" value="+" onclick="display.value+='+'">
+                <br><br>
+                <input type="button" value="6" onclick="display.value+='6'">
+				<input type="button" value="5" onclick="display.value+='5'">
+				<input type="button" value="4" onclick="display.value+='4'">
+				<input type="button" value="-" onclick="display.value+='-'">
+                <br><br>
+                <input type="button" value="3" onclick="display.value+='3'">
+				<input type="button" value="2" onclick="display.value+='2'">
+				<input type="button" value="1" onclick="display.value+='1'">
+				<input type="button" value="*" onclick="display.value+='*'">
+                <br><br>
+                <input type="button" value="0" onclick="display.value+='0'">
+				<input type="button" value="/" onclick="display.value+='/'">
+				<input type="button" value="." onclick="display.value+='.'">
+				<input type="button" value="=" onclick="display.value=eval(cal.display.value)">
+                <br><br>
+                <input type="button" id="clr" value="CLR" onclick="display.value=''">
+            </form>
+        </div>
+    </center>
+</body>
+</html>
+				
